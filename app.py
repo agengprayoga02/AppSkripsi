@@ -520,7 +520,7 @@ def main():
                st.session_state.logged_in = False
                st.session_state.user_id = None
                st.session_state.username = None
-               st.experimental_rerun()
+               st.rerun()
     
     # Authentication Logic
     if not st.session_state.logged_in:
@@ -558,7 +558,7 @@ def main():
                         st.session_state.user_id = user[0]
                         st.session_state.username = user[1]
                         st.success("Login successful")
-                        st.experimental_rerun()
+                        st.rerun()
                     else:
                          st.error("Invalid username or password")
                 else:
