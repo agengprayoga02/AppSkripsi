@@ -1,3 +1,7 @@
 numpy
-scikit-learn
 scipy
+scikit-learn
+tensorflow
+statsmodels
+streamlit
+matplotlib
