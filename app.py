@@ -16,9 +16,10 @@ from itertools import product
 import sqlite3
 
 # Paths
+DATABASE_PATH = os.path.join(BASE_DIR, "dbd_prediction.db")
 DATASETS_DIR = os.path.join(BASE_DIR, "datasets")
 MODELS_DIR = os.path.join(BASE_DIR, "saved_models")
-DATABASE_PATH = os.path.join(BASE_DIR, "dbd_prediction.db")
+
 
 # SQLite Database Setup
 def init_db():
