@@ -13,6 +13,20 @@ import hashlib
 from sklearn.preprocessing import MinMaxScaler
 from statsmodels.tsa.stattools import adfuller
 from itertools import product
+import sqlite3
+
+db_path = os.path.abspath("dbd_prediction.db")
+print(f"Database path: {db_path}") #log path
+if os.path.exists(db_path):
+  print("Database file exists") #log exist
+else:
+  print("Database file does NOT exist") #log not exist
+try:
+    conn = sqlite3.connect(db_path)
+    print("Successfully connected to the database") #log success
+    conn.close()
+except sqlite3.Error as e:
+    print(f"Failed to connect to the database: {e}") #log failed
 
 # Paths
 BASE_DIR = "C:/Users/ASUS/Aplikasi_Skripsi"
